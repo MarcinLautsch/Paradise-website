@@ -195,9 +195,62 @@ body {
 	}
 }
 
+//Hero Img//
+
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	@include mixins.heroImages('../img/thaitiSmall.jpg');
+	text-align: center;
+	color: colors.$pure-white;
+	overflow-x: hidden;
+
+	&__title {
+		font-family: 'Dancing Script', cursiva;
+		margin-bottom: 5em;
+		font-size: 4.8rem;
+	}
+
+	&__text {
+		padding: 1.4em 0;
+	}
+}
+
 //================================
 //MEDIA
 //================================
+
+@media (min-width: 576px) {
+	.dreams {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+				width: 55%;
+
+				&--right {
+					text-align: right;
+				}
+			}
+
+			&-img {
+				width: 40%;
+
+				&--right {
+					order: 1;
+				}
+			}
+		}
+
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
+}
+
+// ----------------------------------------------------
 
 @media (min-width: 768px) {
 	.white-block {
@@ -212,13 +265,35 @@ body {
 
 		&__text {
 			font-size: 2.2rem;
+			text-align: center;
 		}
 
 		&__btn {
 			font-size: 1.6rem;
 		}
 	}
+
+	.dreams {
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.hero-img {
+		padding: 30rem 2rem;
+
+		hr {
+			margin: 0 auto;
+			width: 70%;
+		}
+
+		&__tetx {
+			font-size: 2.4rem;
+		}
+	}
 }
+
+// ---------------------------------------------------------------------------------
 
 @media (min-width: 992px) {
 	.burger-btn {
@@ -231,6 +306,49 @@ body {
 
 		&__heading {
 			font-size: 10rem;
+		}
+	}
+
+	.nav {
+		&__item {
+			font-size: 4.8rem;
+		}
+	}
+
+	.dreams {
+		&__box {
+			margin: 5em 0;
+			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				margin-bottom: 2.5em;
+			}
+		}
+
+		&__title {
+			font-size: 3.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+			text-align: center;
+			color: rgb(25, 141, 161);
+			font-weight: 700;
+		}
+	}
+
+	.hero-img {
+		padding: 40rem 2em;
+		background-image: colors.$blue-gradient, url('../img/thaitiBig.jpg');
+
+		&__title {
+			font-size: 7.2rem;
+		}
+
+		hr {
+			width: 60%;
+			max-width: 900px;
 		}
 	}
 }
