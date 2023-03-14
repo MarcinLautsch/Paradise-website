@@ -230,6 +230,22 @@ body {
   background-color: #eee;
 }
 
+.dreams__box {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+}
+.dreams__img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.dreams__title {
+  margin-bottom: 1em;
+}
+.dreams__text {
+  font-size: 1.4rem;
+}
+
 @media (min-width: 768px) {
   .white-block {
     height: 50px;
