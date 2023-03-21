@@ -404,7 +404,7 @@ body {
 }
 .offers__option-img {
   width: 100%;
-  transition: transfrom 0.3s;
+  transition: transform 0.3s;
 }
 .offers__option-img:hover {
   transform: scale(1.15);
@@ -434,7 +434,7 @@ body {
   cursor: pointer;
 }
 .offers__option-btn::before {
-  color: red;
+  background-color: red;
 }
 
 @media (min-width: 768px) {

@@ -386,7 +386,7 @@ body {
 
 		&-img {
 			width: 100%;
-			transition: transfrom 0.3s;
+			transition: transform 0.3s;
 
 			&:hover {
 				transform: scale(1.15);
@@ -421,7 +421,7 @@ body {
 			cursor: pointer;
 
 			&::before {
-				color: red;
+				background-color: red;
 			}
 		}
 	}
