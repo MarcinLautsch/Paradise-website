@@ -216,40 +216,6 @@ body {
 	}
 }
 
-//================================
-//MEDIA
-//================================
-
-@media (min-width: 576px) {
-	.dreams {
-		&__box {
-			flex-direction: row;
-			justify-content: space-between;
-
-			&-text {
-				width: 55%;
-
-				&--right {
-					text-align: right;
-				}
-			}
-
-			&-img {
-				width: 40%;
-
-				&--right {
-					order: 1;
-				}
-			}
-		}
-
-		&__img {
-			margin-bottom: 0;
-			max-height: 300px;
-		}
-	}
-}
-
 // ---------- ISLANDS------
 
 .islands {
@@ -382,19 +348,23 @@ body {
 		margin: 1em 0;
 		box-shadow: 5px 5px 10px #2e2e2e2e;
 		background-color: colors.$pure-white;
+		border-radius: 12px;
+		box-shadow: 6px 6px 12px 1px colors.$green-color-cards;
 		overflow: hidden;
 
 		&-img {
 			width: 100%;
-			transition: transform 0.3s;
+			transition: transform 0.5s;
 
 			&:hover {
-				transform: scale(1.15);
+				transform: scale(1.2);
 			}
 		}
 
 		&-info {
 			padding: 2em;
+			background-color: colors.$pure-white;
+			z-index: 10;
 		}
 
 		&-heading {
@@ -409,7 +379,6 @@ body {
 			font-size: 1.3rem;
 			color: colors.$dark;
 		}
-
 		&-btn {
 			margin-top: 1em;
 			padding: 0.8em;
@@ -421,14 +390,77 @@ body {
 			cursor: pointer;
 
 			&::before {
-				background-color: red;
+				background-color: colors.$secondary-color;
 			}
 		}
 	}
 }
 
-// --------------------------MEDIA---------------------------------------------------
+//================================
+//MEDIA
+//================================
 
+@media (min-width: 576px) {
+	.dreams {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+				width: 55%;
+
+				&--right {
+					text-align: right;
+				}
+			}
+
+			&-img {
+				width: 40%;
+
+				&--right {
+					order: 1;
+				}
+			}
+		}
+
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
+
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img {
+				width: 50%;
+				height: auto;
+
+				&--right {
+					order: 1;
+				}
+			}
+
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+
+			&-btn {
+				padding: 1em;
+			}
+		}
+	}
+}
 // ----------------------------------------------------
 
 @media (min-width: 768px) {
@@ -541,6 +573,21 @@ body {
 		hr {
 			width: 60%;
 			max-width: 900px;
+		}
+	}
+
+	.offers {
+		background-image: colors.$blue-gradient, url('../img/meladivesBig.jpg');
+
+		&__option {
+			&-img {
+				object-fit: cover;
+				height: 300px;
+			}
+
+			&-text {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }
