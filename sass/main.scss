@@ -85,7 +85,7 @@ body {
 	transform: translateX(100%);
 	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 	background-image: colors.$blue-gradient-solid;
-	z-index: 10;
+	z-index: 100;
 
 	&--active {
 		transform: translateX(0);
@@ -397,6 +397,48 @@ body {
 	}
 }
 
+// -------------Reviews--------------
+
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2.4em;
+		padding: 2em;
+		border-radius: 10px;
+		box-shadow: 3px 3px 10px #2e2e2e70;
+		transition: transform 0.4s;
+
+		&:hover {
+			transform: scale(0.92);
+		}
+	}
+
+	img {
+		position: absolute;
+		top: 5%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 50%;
+		border: solid 1px colors.$dark;
+		box-shadow: 3px 3px 6px #2e2e2e96;
+	}
+
+	&__box-quote {
+		margin-top: 0.4em;
+		margin-bottom: 0.4em;
+		font-size: 3rem;
+		color: colors.$main-color;
+	}
+
+	&__box-text {
+		margin-bottom: 1em;
+		font-size: 1.4rem;
+		color: colors.$dark;
+	}
+}
 //================================
 //MEDIA
 //================================
@@ -462,6 +504,16 @@ body {
 		}
 	}
 }
+// ----------------------------------------------------
+
+// tyczy sie selcji reviews-opinie zmiana paddingu ktory jest zapisany w components zapis nizej 767px.
+
+@media (max-width: 767px) {
+	.reviews.section-padding {
+		padding: 6em 0;
+	}
+}
+
 // ----------------------------------------------------
 
 @media (min-width: 768px) {
