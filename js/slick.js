@@ -8,14 +8,15 @@ $(document).ready(function () {
 		mobileFirst: true,
 		responsive: [
 			{
-				breakpoint: 700,
-				settings: {
-					slidesToShow: 4,
-					slidesToScroll: 1,
-				},
 				breakpoint: 320,
 				settings: {
 					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+
+				breakpoint: 700,
+				settings: {
+					slidesToShow: 4,
 					slidesToScroll: 1,
 				},
 			},
