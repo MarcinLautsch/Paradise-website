@@ -1,29 +1,50 @@
 const nav = document.querySelector('.nav')
-const btnBurger = document.querySelector('.burger-btn')
-const allNaviItems = document.querySelectorAll('.nav__item')
-
-// =========
+const navBtn = document.querySelector('.burger-btn')
+const allNavItems = document.querySelectorAll('.nav__item')
+const navBtnBars = document.querySelector('.burger-btn__bars')
+const allSections = document.querySelectorAll('section')
+const footerYear = document.querySelector('.footer__year')
 
 const handleNav = () => {
 	nav.classList.toggle('nav--active')
 
-	allNaviItems.forEach(item => {
+	navBtnBars.classList.remove('black-bars-color')
+
+	allNavItems.forEach(item => {
 		item.addEventListener('click', () => {
 			nav.classList.remove('nav--active')
 		})
 	})
 
-	handlenaviItemAnimation()
+	handleNavItemsAnimation()
 }
 
-const handlenaviItemAnimation = () => {
+const handleNavItemsAnimation = () => {
 	let delayTime = 0
 
-	allNaviItems.forEach(item => {
-		item.classList.toggle('nav-item-animation')
+	allNavItems.forEach(item => {
+		item.classList.toggle('nav-items-animation')
 		item.style.animationDelay = '.' + delayTime + 's'
 		delayTime++
 	})
 }
+const handleObserver = () => {
+	const currentSection = window.scrollY
 
-btnBurger.addEventListener('click', handleNav)
+	allSections.forEach(section => {
+		if (section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+			navBtnBars.classList.add('black-bars-color')
+		} else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+			navBtnBars.classList.remove('black-bars-color')
+		}
+	})
+}
+
+const handleCurrentYear = () => {
+	let year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+
+handleCurrentYear()
+navBtn.addEventListener('click', handleNav)
+window.addEventListener('scroll', handleObserver)
