@@ -552,6 +552,14 @@ body {
 		padding: 2em;
 		text-align: center;
 	}
+
+	a {
+		color: colors.$pure-white;
+
+		&:hover {
+			color: colors.$main-color;
+		}
+	}
 }
 
 //================================
