@@ -30,7 +30,7 @@ body {
 	background-color: transparent;
 	border: 1px solid transparent;
 	cursor: pointer;
-	z-index: 100;
+	z-index: 200;
 
 	&:focus {
 		outline: none;
@@ -132,7 +132,7 @@ body {
 	animation: naviItemAnimation 1s both;
 }
 
-// ----do menu Hamburgerowego---
+// ----do menu Hamburgerowego zmiana koloru w sekcjach---
 
 .black-bars-color,
 .black-bars-color::after,
